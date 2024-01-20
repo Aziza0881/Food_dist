@@ -128,7 +128,7 @@ const seconds = document.querySelector('#seconds');
 
 function updateTimer() {
     const now = new Date().getTime();
-    const deadline = new Date(now + 2 * 60 * 1000); // Adding 10 minutes in milliseconds
+    const deadline = new Date(now + 2 * 60 * 1000); 
     const x = setInterval(function() {
         const currentTime = new Date().getTime();
         const timeGap = deadline - currentTime;
@@ -143,7 +143,7 @@ function updateTimer() {
             clearInterval(x);
             minutes.innerHTML = "00";
             seconds.innerHTML = "00";
-            // Add confetti here
+            
             startConfetti();
         }
     }, 1000);
